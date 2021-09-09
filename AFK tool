@@ -2,25 +2,23 @@ from os import abort, stat_result
 import pyautogui as auto 
 from time import sleep
 
-status = True
+n=0
 
-
-while status:
-    auto.moveTo(700,50,duration= 0.3)
+while n < (3):
+    auto.moveTo(700,50,duration = 0.3)
+    auto.click
+    print(n+1)
+    sleep(3)
+    auto.moveTo(700,700,duration = 0.3)
     auto.click
     print(auto.position())
     sleep(3)
-    auto.moveTo(700,700,duration= 0.3)
-    auto.click
-    print(auto.position())
-    sleep(3)
-    Status = False
-    break
+    n+=1
 
 #import msvcrt 
 #abort=False 
 #while not abort:
         #if msvcrt.kbhit() and msvcrt.getch() == chr(27).encode():
             #abort=True
-            #auto.write('cursor test stop')
-            #break   
+            #print('cursor test stop')
+            #break
